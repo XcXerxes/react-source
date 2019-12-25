@@ -77,6 +77,7 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        PORT: 8888
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin
@@ -88,7 +89,8 @@ function getClientEnvironment(publicUrl) {
     "__DEV__": true,
     "__PROFILE__": true,
     "__UMD__": true,
-    "__EXPERIMENTAL__": false
+    "__EXPERIMENTAL__": false,
+    PORT: 8888
   };
 
   return { raw, stringified };
